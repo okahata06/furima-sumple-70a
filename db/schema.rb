@@ -4,18 +4,6 @@
 
 ActiveRecord::Schema.define(version: 2020_03_19_034504) do
 
-  create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "zip_code", null: false
-    t.string "prefecture", null: false
-    t.string "city", null: false
-    t.string "street_num", null: false
-    t.string "building"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_addresses_on_user_id"
-  end
-
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "body", null: false
     t.integer "product_id", null: false
